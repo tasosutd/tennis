@@ -1,25 +1,37 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace Tennis
 {
     public class Player
     {
-        private string Server { get; set; }
+        public List<String> pointsDescription = new List<string>() { "love", "fifteen", "thirty", "forty" };
 
-        private string Receiver { get; set; }
-
-        private int ServerScore { get; set; }
-
-        private int ReceiverScore { get; set; }
-
-        public Player(string server, string receiver)
+        private int score;
+        public int GetPlayerScore()
         {
-            // initialise players
-            Server = server;
-            Receiver = receiver;
+            return score;
+        }
 
-            // initialise scoreboard
-            ServerScore = 0;
-            ReceiverScore = 0;
+        String name;
+        public String getName()
+        {
+            return name;
+        }
+
+        public void AddPoint()
+        {
+            this.score = this.score + 1;
+        }
+
+        public Player(String name)
+        {
+            this.name = name;
+        }
+
+        public String getScoreDescription()
+        {
+            return pointsDescription[score];
         }
     }
 }
