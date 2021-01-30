@@ -47,11 +47,20 @@ namespace Tennis
         }
 
         // game.point_to(server/reveiver)
-        public string Point_To (Player player)
+        public void Point_To (Player player)
         {
             player.AddPoint();
-            pointsLog.Add(player.getName());
+            UpdateScoreLine(player);
+        }
 
+        public void UpdateScoreLine(Player player)
+        {
+            pointsLog.Add(player.getName());
+            
+        }
+
+        public string GetScoreLine()
+        {
             return "Points won: " + string.Join(", ", pointsLog);
         }
     }
