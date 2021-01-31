@@ -5,7 +5,7 @@ namespace Tennis
 {
     public class Player
     {
-        public List<String> pointsDescription = new List<string>() { "love", "fifteen", "thirty", "forty" };
+        public List<String> pointsDescription = new List<string>() { "Love", "Fifteen", "Thirty", "Forty" };
 
         private int score;
         public int GetPlayerScore()
@@ -13,23 +13,23 @@ namespace Tennis
             return score;
         }
 
-        String name;
-        public String getName()
+        private string name;
+        public string GetName()
         {
             return name;
         }
 
         public void AddPoint()
         {
-            this.score = this.score + 1;
+            this.score += 1;
         }
 
-        public Player(String name)
+        public Player(string name)
         {
             this.name = name;
         }
 
-        public String getScoreDescription()
+        public string GetScoreDescription()
         {
             return pointsDescription[score];
         }

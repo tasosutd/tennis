@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.808.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tennis", "Tennis\Tennis.csproj", "{C5604E21-13BC-4428-9799-42433569041F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TennisGameTests", "TennisGameTests\TennisGameTests.csproj", "{061F7D82-64F9-4005-AD02-94CF1207E248}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,11 +17,31 @@ Global
 		{C5604E21-13BC-4428-9799-42433569041F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5604E21-13BC-4428-9799-42433569041F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5604E21-13BC-4428-9799-42433569041F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{061F7D82-64F9-4005-AD02-94CF1207E248}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{061F7D82-64F9-4005-AD02-94CF1207E248}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{061F7D82-64F9-4005-AD02-94CF1207E248}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{061F7D82-64F9-4005-AD02-94CF1207E248}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E47A6956-8C94-4299-9E41-FE184F3D02AC}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.scope = text/x-csharp
+		$0.TextStylePolicy = $4
+		$4.FileWidth = 80
+		$4.TabsToSpaces = True
+		$4.scope = text/plain
+		$0.StandardHeader = $5
+		$0.VersionControlPolicy = $6
 	EndGlobalSection
 EndGlobal

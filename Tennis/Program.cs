@@ -6,11 +6,42 @@ namespace Tennis
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            // Run a sample case
+            TestScenario_B_Won();
+
+            Console.WriteLine("Sample scenario finished. Press any key to exit ...");
+            Console.ReadKey();
+            
+        }
+
+        private static void TestScenario_B_Won()
+        {
+            Player server = new Player("J");
+            Player receiver = new Player("B");
+            Game game = new Game(server, receiver);
+
+            Console.WriteLine("Server: " + server.GetName());
+            Console.WriteLine("Receiver: " + receiver.GetName());
+
+            game.Point_To(server);
+            game.Point_To(receiver);
+
+            Console.WriteLine(game.GetMatchScore());
+
+            game.Point_To(server);
+            game.Point_To(receiver);
+
+            Console.WriteLine(game.GetMatchScore());
+
+            game.Point_To(server);
+            game.Point_To(receiver);
+            game.Point_To(receiver);
+
+            Console.WriteLine(game.GetMatchScore());
+
+            game.Point_To(receiver);
+
+            Console.WriteLine(game.GetMatchScore());
         }
     }
 }
-
-
-//fca845ab38388192a7948d3a2d7e9a8df04ad719
-//1d38a0c0327240a2cd381283143bcbd2de4d1de3

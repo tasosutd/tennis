@@ -8,8 +8,6 @@ namespace Tennis
         private Player server;
         private Player reveiver;
 
-        private List<string> pointsLog = new List<string>();
-
         // game.new(server, reveiver)
         public Game(Player server, Player receiver)
         {
@@ -24,24 +22,24 @@ namespace Tennis
             {
                 if (Math.Abs(reveiver.GetPlayerScore() - server.GetPlayerScore()) >= 2)
                 {
-                    return "Game, " + getLeadPlayer().getName();
+                    return "Score: Game, " + GetLeadPlayer().GetName();
                 }
                 else if (server.GetPlayerScore() == reveiver.GetPlayerScore())
                 { 
-                    return "Deuce";
+                    return "Score: Deuce";
                 }
                 else
                 {
-                    return "Advantage, " + getLeadPlayer().getName();
+                    return "Score: Advantage, " + GetLeadPlayer().GetName();
                 }
             }
             else
             {
-                return "Score: " + server.getScoreDescription() + ", " + reveiver.getScoreDescription();
+                return "Score: " + server.GetScoreDescription() + ", " + reveiver.GetScoreDescription();
             }
         }
 
-        public Player getLeadPlayer()
+        public Player GetLeadPlayer()
         {
             return (server.GetPlayerScore() > reveiver.GetPlayerScore()) ? server : reveiver;
         }
@@ -50,18 +48,6 @@ namespace Tennis
         public void Point_To (Player player)
         {
             player.AddPoint();
-            UpdateScoreLine(player);
-        }
-
-        public void UpdateScoreLine(Player player)
-        {
-            pointsLog.Add(player.getName());
-            
-        }
-
-        public string GetScoreLine()
-        {
-            return "Points won: " + string.Join(", ", pointsLog);
         }
     }
 }
